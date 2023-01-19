@@ -13,7 +13,7 @@ const Item = ({ id, name, img, price }) => {
                 <p className='font-bold'>Precio: ${price}</p>
             </div>
             <div className='py-2 text-center'>
-                <Link to={`/detalle/${id}`} className='bg-gray-900 text-white p-2 rounded cursor-pointer hover:bg-gray-800 duration-300'>Ver detalle</Link>
+                <Link to={`/detalle/${id}`} className='bg-blue-500 mx-4 rounded hover:bg-blue-700 duration-300 text-white p-2  cursor-pointer'>Ver detalle</Link>
             </div>
         </div>
     )

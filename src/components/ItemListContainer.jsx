@@ -35,7 +35,7 @@ const ItemListContainer = ({ greeting }) => {
         <div className='bg-[#000211]'>
             <div className='md:w-[1200px] h-full flex flex-col justify-center align-center mx-auto py-40'>
                 <h1 className='text-3xl text-white font-bold mx-auto'>{greeting}</h1>
-                <ItemList products={products} className='' />
+                <ItemList products={products} className=''/>
             </div>
         </div>
     )

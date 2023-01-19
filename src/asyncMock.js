@@ -1,8 +1,8 @@
 const products = [
-    { id: '1', name: "Mantenimiento", category: "mantenimiento",  price: 2500, img: "https://images.pexels.com/photos/4792727/pexels-photo-4792727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", stock: 15 },
-    { id: '2', name: "Armado de pc", category: "armado", price: 3000, img: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", stock: 15 },
-    { id: '3', name: "Cambio de componentes", category: "componentes", price: 1500, img: "https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", stock: 15 },
-    { id: '4', name: "Formateo e instalación de SO", category: "sistema", price: 2000, img: "https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", stock: 15 }
+    { id: '1', name: "Mantenimiento", category: "mantenimiento",  price: 2500, img: "https://images.pexels.com/photos/4792727/pexels-photo-4792727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", stock: 15, description: 'Limpieza de PC.' },
+    { id: '2', name: "Armado de pc", category: "armado", price: 3000, img: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", stock: 15, description: 'Armado de PC gamer, oficina u hogar.' },
+    { id: '3', name: "Cambio de componentes", category: "componentes", price: 1500, img: "https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", stock: 15, description: 'Cambio de fuente, RAM, CPU, etc.' },
+    { id: '4', name: "Formateo e instalación de SO", category: "sistema", price: 2000, img: "https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", stock: 15, description: 'Instalación de Windows, chequeo de disco, etc.' }
 ]
 
 
