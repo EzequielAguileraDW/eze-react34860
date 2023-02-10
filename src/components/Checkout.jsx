@@ -101,7 +101,7 @@ const Checkout = () => {
     if (orderId) {
         return (
             <div>
-                <h1 className='flex justify-center font-bold text-2xl text-white py-40 bg-[#000211] h-[650px]'>Hola {datos.nombre}, el ID de su compra es: {orderId}</h1>
+                <h1 className='flex justify-center font-bold text-white py-40 bg-[#000211] h-[650px]'>Hola {datos.nombre}, el ID de su compra es: {orderId}, el mismo te fue enviado a {datos.email}</h1>
             </div>
         )
     }

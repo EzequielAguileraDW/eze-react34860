@@ -9,7 +9,7 @@ import { getDocs, collection, query, where } from 'firebase/firestore';
 import { getProducts } from '../services/firebase/firestore/products'
 
 const ItemListContainer = ({ greeting }) => {
-    useTitle('Todos los productos', [])
+    useTitle('Todos los servicios', [])
 
     const { categoryId } = useParams()
 
