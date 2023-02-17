@@ -14,7 +14,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         console.log('agregue al carrito: ', quantity)
 
         addItem({ id, name, price, quantity })
-        setNotification('error', `Se agregó correctamente ${quantity} ${name} al carrito`, 5)
+        setNotification('error', `Se agregó correctamente ${quantity} servicios al carrito`, 5)
     }
 
     return (

@@ -1,10 +1,10 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+//import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAsync } from '../hooks/useAsync'
 import { useTitle } from '../hooks/useTitle'
 import ItemList from './ItemList';
-import { getDocs, collection, query, where } from 'firebase/firestore';
+//import { getDocs, collection, query, where } from 'firebase/firestore';
 // import { db } from '../services/firebase/firebaseConfig';
 import { getProducts } from '../services/firebase/firestore/products'
 
@@ -19,14 +19,12 @@ const ItemListContainer = ({ greeting }) => {
 
 
     if(loading) {
-        return <h1>Cargando servicios...</h1>
+        return <h1 className='py-40 text-center font-bold text-white bg-[#000211] h-[650px]'>Cargando servicios...</h1>
     }
 
     if(error) {
-        return <h1>Hubo un error al cargas los servicios :(</h1>
+        return <h1 className='py-40 text-center font-bold text-white bg-[#000211] h-[650px]'>Hubo un error al cargas los productos</h1>
     }
-
-
 
     return (
         <div className='bg-[#000211]'>

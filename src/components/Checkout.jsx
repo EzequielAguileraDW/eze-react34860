@@ -108,7 +108,7 @@ const Checkout = () => {
 
     if (cart.length === 0) {
         return (
-            <h1 className='flex justify-center font-bold py-40'>No hay servicios en el carrito :(</h1>
+            <h1 className='flex justify-center font-bold py-40 text-white bg-[#000211] h-[650px]'>No hay servicios en el carrito :(</h1>
         )
     }
 

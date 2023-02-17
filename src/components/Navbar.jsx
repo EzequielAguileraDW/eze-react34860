@@ -37,10 +37,6 @@ const Navbar = () => {
 
             {/* Menú mobile */}
             <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#00010A] flex flex-col justify-center items-center origin-left transition duration-300'}>
-                {/* <li className='py-6 text-2xl'>Inicio</li>
-                <li className='py-6 text-2xl'>Tienda</li>
-                <li className='py-6 text-2xl'>Preguntas frecuentes</li>
-                <li className='py-6 text-2xl'>Contacto</li> */}
                 <NavLink to={`/categoria/mantenimiento`} className='py-6 text-2xl'>Mantenimiento</NavLink>
                 <NavLink to={`/categoria/armado`} className='py-6 text-2xl'>Armado</NavLink>
                 <NavLink to={`/categoria/componentes`} className='py-6 text-2xl'>Componentes</NavLink>

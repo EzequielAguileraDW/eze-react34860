@@ -2,19 +2,30 @@ import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
 
-const CartContainer = () => {
+
+const CartContainer = ({ id }) => {
     const { cart } = useContext(CartContext)
+
+    const { removeItem } = useContext(CartContext)
+
     return (
         <div className='text-center py-20 bg-[#000211] h-[650px]'>
-            <h1 className='text-3xl font-bold text-white py-[50px]'>Carrito</h1>
+            <h1 className='text-3xl font-bold text-white py-[50px]'>Servicios en el carrito</h1>
             <div className='py-[25px]'>
                 {
                     cart.map(prod => {
                         return (
-                            <h2 className='font-bold text-white py-5' key={prod.id}>- {prod.name}, Cantidad: {prod.quantity}</h2>
+                            <div className='flex justify-center py-[25px]' key={prod.id}>
+                            <h3 className='text-white px-[20px] font-bold'>{prod.name}</h3>
+                            <h4 className='text-white px-[20px]'>Cantidad: {prod.quantity}</h4>
+                            <h4 className='text-white px-[20px]'>Precio: ${prod.price}</h4>
+                            <h4 className='text-white px-[20px]'>Subtotal: ${prod.price * prod.quantity}</h4>
+                            <button className='bg-red-900 mx-4 rounded hover:bg-red-500 duration-300 text-white  px-1 cursor-pointer' onClick={() => removeItem(id)}>Remover</button>
+                        </div>
                         )
                     })
                 }
+
                 <div className='py-[75px]'>
                     <Link to='/checkout' className='bg-blue-500 mx-4 rounded hover:bg-blue-700 duration-300 text-white p-2  cursor-pointer'>Checkout</Link>
                 </div>

@@ -9,11 +9,11 @@ const ItemCart = ({ id, name, quantity, price }) => {
 
     return (
         <div>
-            <h3>{name}</h3>
-            <h4>Cantidad {quantity}</h4>
-            <h4>Precio: ${price}</h4>
-            <h4>Subtotal: ${price * quantity}</h4>
-            <button className='' onClick={() => removeItem(id)}>Remover</button>
+            <h3 className='text-white'>{name}</h3>
+            <h4 className='text-white'>Cantidad {quantity}</h4>
+            <h4 className='text-white'>Precio: ${price}</h4>
+            <h4 className='text-white'>Subtotal: ${price * quantity}</h4>
+            <button className='text-white' onClick={() => removeItem(id)}>Remover</button>
         </div>
     )
 }
