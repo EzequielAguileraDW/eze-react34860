@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../services/firebase/firebaseConfig'
 
+
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true)
@@ -21,10 +22,10 @@ const ItemDetailContainer = () => {
 
             try {
                 const snapshot = await getDoc(productRef)
-    
+
                 const fields = snapshot.data()
-                const productAdapted = { id: snapshot.id, ...fields}
-    
+                const productAdapted = { id: snapshot.id, ...fields }
+
                 setProduct(productAdapted)
             } catch (error) {
                 console.log(error)
@@ -36,7 +37,11 @@ const ItemDetailContainer = () => {
 
 
     if (loading) {
-        return <h1 className='font-bold py-40 text-white bg-[#000211] h-[650px]'>Cargando...</h1>
+        return (
+            <div>
+                <h1 className='font-bold py-40 text-center text-white bg-[#000211] h-[650px]'>Cargando...</h1>
+            </div>
+        )
     }
 
     return (

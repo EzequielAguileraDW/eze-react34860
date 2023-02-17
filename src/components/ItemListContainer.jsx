@@ -1,15 +1,13 @@
 import React from 'react';
-//import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAsync } from '../hooks/useAsync'
 import { useTitle } from '../hooks/useTitle'
 import ItemList from './ItemList';
-//import { getDocs, collection, query, where } from 'firebase/firestore';
-// import { db } from '../services/firebase/firebaseConfig';
 import { getProducts } from '../services/firebase/firestore/products'
 
+
 const ItemListContainer = ({ greeting }) => {
-    useTitle('Todos los servicios', [])
+    useTitle('Servicios filtrados', [])
 
     const { categoryId } = useParams()
 
@@ -18,12 +16,17 @@ const ItemListContainer = ({ greeting }) => {
     const { data: products, error, loading } = useAsync(getProductsWithCategory, [categoryId])
 
 
-    if(loading) {
-        return <h1 className='py-40 text-center font-bold text-white bg-[#000211] h-[650px]'>Cargando servicios...</h1>
+    if (loading) {
+        return (
+
+                <h1 className='py-40 text-center font-bold text-white bg-[#000211] h-[650px]'>Cargando servicios...</h1>
+
+
+        )
     }
 
-    if(error) {
-        return <h1 className='py-40 text-center font-bold text-white bg-[#000211] h-[650px]'>Hubo un error al cargas los productos</h1>
+    if (error) {
+        return <h1 className='py-40 text-center font-bold text-white bg-[#000211] h-[650px]'>Hubo un error al cargar los productos</h1>
     }
 
     return (

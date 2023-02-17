@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { collection, query, where, documentId, getDocs, writeBatch, addDoc } from 'firebase/firestore'
 import { CartContext } from '../context/CartContext'
 import { db } from '../services/firebase/firebaseConfig'
@@ -23,6 +23,10 @@ const Checkout = () => {
     }
 
     const navigate = useNavigate()
+
+    useEffect(() => {
+        document.title = 'Checkout'
+    }, [])
 
 
     const createOrder = async () => {

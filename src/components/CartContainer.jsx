@@ -1,12 +1,16 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
 
 
-const CartContainer = ({ id }) => {
+const CartContainer = () => {
     const { cart } = useContext(CartContext)
 
     const { removeItem } = useContext(CartContext)
+
+    useEffect(() => {
+        document.title = 'Carrito'
+    }, [])
 
     return (
         <div className='text-center py-20 bg-[#000211] h-[650px]'>
@@ -16,11 +20,12 @@ const CartContainer = ({ id }) => {
                     cart.map(prod => {
                         return (
                             <div className='flex justify-center py-[25px]' key={prod.id}>
+                                <img src={prod.img} alt="Foto" />
                             <h3 className='text-white px-[20px] font-bold'>{prod.name}</h3>
                             <h4 className='text-white px-[20px]'>Cantidad: {prod.quantity}</h4>
                             <h4 className='text-white px-[20px]'>Precio: ${prod.price}</h4>
                             <h4 className='text-white px-[20px]'>Subtotal: ${prod.price * prod.quantity}</h4>
-                            <button className='bg-red-900 mx-4 rounded hover:bg-red-500 duration-300 text-white  px-1 cursor-pointer' onClick={() => removeItem(id)}>Remover</button>
+                            <button className='bg-red-900 mx-4 rounded hover:bg-red-500 duration-300 text-white  px-1 cursor-pointer' onClick={() => removeItem(prod.id)}>Eliminar</button>
                         </div>
                         )
                     })
