@@ -38,9 +38,7 @@ const ItemDetailContainer = () => {
 
     if (loading) {
         return (
-            <div>
                 <h1 className='font-bold py-40 text-center text-white bg-[#000211] h-[650px]'>Cargando...</h1>
-            </div>
         )
     }
 
