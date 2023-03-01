@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const CartContainer = () => {
-    const { cart } = useContext(CartContext)
-
-    const { removeItem } = useContext(CartContext)
+    const { cart, removeItem } = useContext(CartContext)
 
     useEffect(() => {
         document.title = 'Carrito'
@@ -20,7 +18,6 @@ const CartContainer = () => {
                     cart.map(prod => {
                         return (
                             <div className='flex justify-center py-[25px]' key={prod.id}>
-                                <img src={prod.img} alt="Foto" />
                             <h3 className='text-white px-[20px] font-bold'>{prod.name}</h3>
                             <h4 className='text-white px-[20px]'>Cantidad: {prod.quantity}</h4>
                             <h4 className='text-white px-[20px]'>Precio: ${prod.price}</h4>

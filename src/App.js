@@ -12,18 +12,18 @@ function App() {
 
     <div>
       <NotificationProvider>
-        <CartProvider>
-          <BrowserRouter>
-            <Navbar />
-            <Routes>
-              <Route path='/' element={<ItemListContainer greeting='Todos nuestros servicios' />} />
-              <Route path='/categoria/:categoryId' element={<ItemListContainer greeting='Servicios filtrados' />} />
-              <Route path='/detalle/:productId' element={<ItemDetailContainer />} />
-              <Route path='/cart' element={<CartContainer />} />
-              <Route path='/checkout' element={<Checkout />} />
-            </Routes>
-          </BrowserRouter>
-        </CartProvider>
+          <CartProvider>
+            <BrowserRouter>
+              <Navbar />
+              <Routes>
+                <Route path='/' element={<ItemListContainer greeting='Todos nuestros servicios' />} />
+                <Route path='/categoria/:categoryId' element={<ItemListContainer greeting='Servicios filtrados' />} />
+                <Route path='/detalle/:productId' element={<ItemDetailContainer />} />
+                <Route path='/cart' element={<CartContainer />} />
+                <Route path='/checkout' element={<Checkout />} />
+              </Routes>
+            </BrowserRouter>
+          </CartProvider>
       </NotificationProvider>
 
     </div>

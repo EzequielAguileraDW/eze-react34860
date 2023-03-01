@@ -1,4 +1,13 @@
-Link al repositorio de GitHub: https://github.com/ezequiel-aguilera/eze-react34860
+///// ZEQUE.PCFIX /////
+
+Instalación:
+git clone https://github.com/ezequiel-aguilera/eze-react34860.git
+
+npm install
+
+npm start
+
+Link al perfil de GitHub: https://github.com/ezequiel-aguilera/
 
 Para el trabajo final hice un formulario en Checkout, al completar los datos y haciendo click en Generar orden se mostrará el nombre del comprador + el id generado.
 

@@ -1,5 +1,4 @@
-import React, { useState, useContext } from 'react';
-
+import React, { useState, useContext } from 'react';1
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/logo.png';
 import CartWidget from './CartWidget';
